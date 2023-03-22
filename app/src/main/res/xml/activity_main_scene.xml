@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/firstWeek" />
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/item_day" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/item_day" />
+
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/item_day" />
+
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+
+        <Constraint
+            android:id="@+id/ramadanLottie"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:scaleType="centerCrop"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/item_day"
+            motion:layout_constraintTop_toTopOf="@+id/item_day"
+            motion:lottie_autoPlay="true"
+            motion:lottie_loop="true"
+            motion:lottie_rawRes="@raw/iftar" />
+
+        <Constraint
+            android:id="@+id/bottomSheetGuidLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            motion:layout_constraintGuide_percent="0.53" />
+
+        <Constraint
+            android:id="@+id/weekGuidLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            motion:layout_constraintGuide_percent="0.30" />
+
+
+    </ConstraintSet>
+
+
+</MotionScene>

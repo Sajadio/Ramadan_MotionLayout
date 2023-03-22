@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="CustomCard" parent="CardView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="android:layout_margin">@dimen/_8dp</item>
+    </style>
+
+    <style name="CustomCard.WithDifferentSize">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="TextDay" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="TextDay.WithSmallTextSize">
+        <item name="android:textSize">@dimen/_12sp</item>
+        <item name="android:drawableStart">@drawable/round_access_time_24</item>
+        <item name="android:drawablePadding">@dimen/_8dp</item>
+        <item name="android:drawableTint">#7A7A7A</item>
+    </style>
+
+    <style name="CommonLinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@dimen/_16dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+</resources>
